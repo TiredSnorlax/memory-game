@@ -1,0 +1,100 @@
+@keyframes menuContainerEnter {
+    0% {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+}
+
+@keyframes menuEnter {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.menuContainer {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transition: 0.5s;
+
+    animation-name: menuContainerEnter;
+    animation-duration: 0.5s;
+
+}
+
+.menu {
+    max-width: 300px;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    padding: 30px;
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: 0.5s;
+
+    animation-name: menuEnter;
+    animation-duration: 0.5s;
+}
+
+.menu * {
+    margin: 20px 0;
+}
+
+.menu h2 {
+    font-size: 50px;
+}
+
+
+.menu p {
+    font-size: 24px;
+}
+
+.menu button {
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background: blue;
+
+
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.menu button:active {
+    background: rgb(127, 127, 255);
+}
+
+.menuContainer.close {
+    background: rgba(0, 0, 0, 0);
+}
+
+.menuContainer.close .menu {
+    transform: scale(0);
+
+    opacity: 0;
+}

@@ -1,0 +1,37 @@
+.matrixContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 400px;
+    height: 100%;
+
+}
+
+
+.matrix {
+    display: grid;
+
+    width: 100vw;
+    height: 100vw;
+    max-width: 580px;
+    max-height: 580px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+
+    margin: 40px 0;
+    padding: 20px;
+
+
+    transition: 1s;
+}
+
+/* SHRINK TRANSITION */
+
+.matrix.shrink {
+    width: 100px;
+    height: 100px;
+
+}
